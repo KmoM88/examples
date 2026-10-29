@@ -1,0 +1,31 @@
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "examples_rclpy_minimal_publisher"
+version = "0.19.7"
+description = "Examples of minimal publishers using rclpy."
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Mikael Arguedas", email = "mikael@osrfoundation.org" },
+]
+maintainers = [
+    { name = "Aditya Pande", email = "aditya.pande@openrobotics.org" },
+    { name = "Alejandro Hernandez Cordero", email = "alejandro@openrobotics.org" },
+]
+keywords = ["ROS"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Topic :: Software Development",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+publisher_old_school = "examples_rclpy_minimal_publisher.publisher_old_school:main"
+publisher_local_function = "examples_rclpy_minimal_publisher.publisher_local_function:main"
+publisher_member_function = "examples_rclpy_minimal_publisher.publisher_member_function:main"
+publisher_member_function_with_wait_for_all_acked = "examples_rclpy_minimal_publisher.publisher_member_function_with_wait_for_all_acked:main"
